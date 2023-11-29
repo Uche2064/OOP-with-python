@@ -1,4 +1,4 @@
-from datetime import datetime
+import datetime
 class Employee:
     raise_amount = 1.04
     nb_of_emps = 0
@@ -31,12 +31,13 @@ class Employee:
             return False
         else:
             return True 
+    def __add__(self, other):
+        return self.salary + other.salary
         
 
 emp_1 = Employee("Uche", "Lek", 150000)
 emp_2 = Employee("Doe", "John", 200000)
 
-date_xamp = datetime.date((2001,10,10))
-print(Employee.work_day(date_xamp))
-
+date_xamp = datetime.date(2023,11,29)
+print(date_xamp)
 
